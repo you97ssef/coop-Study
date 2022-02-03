@@ -1,6 +1,6 @@
 <template>
-    <div class="m-5">
-        <h2 class="m-3">New conversation</h2>
+    <div class="m-5 box">        
+        <h2 class="title is-2 has-text-centered">New conversation</h2>
         <form class="m-3" @submit.prevent="submit()">
             <div class="field">
                 <input class="input" type="text" required v-model="label">

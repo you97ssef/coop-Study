@@ -1,7 +1,7 @@
 <template>
     <div>
-        <h1 class="title">
-            Message Edit
+        <h1 class="title has-text-centered">
+            Modification de message
         </h1>
         <div class="box">
             <h6 v-if="message.created_at === message.modified_at" class="title is-6">

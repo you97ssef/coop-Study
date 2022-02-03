@@ -3,7 +3,7 @@
         <article class="media">
             <router-link :to="'/member/' + message.member_id" class="media-left">
                 <figure class="image is-48x48">
-                    <v-gravatar :email="email" />
+                    <v-gravatar class="is-rounded" :email="email" />
                 </figure>
             </router-link>
             <div class="media-content">

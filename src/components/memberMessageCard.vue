@@ -3,7 +3,7 @@
         <article class="media">
             <router-link :to="'/conversation/' + message.conversation.id" class="media-left">
                 <figure class="image is-48x48">
-                    <v-gravatar :email="message.conversation.id" />
+                    <vue-letter-avatar :name='message.conversation.label' size='40' />
                 </figure>
             </router-link>
             <div class="media-content">

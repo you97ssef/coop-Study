@@ -1,6 +1,9 @@
 <template>
-    <div class="m-5">
-        <h2 class="m-3">Login</h2>
+    <div class="m-5 box">
+        <figure class="has-text-centered">
+            <img src="@/assets/images/user.jpg" width="100" alt="img">
+        </figure>
+        <h2 class="title is-2 has-text-centered">Login</h2>
         <form class="m-3" @submit.prevent="validation()">
             <div class="field">
                 <input class="input" type="email" required v-model="email">
@@ -13,7 +16,7 @@
             </div>
         </form>
         <div>
-            <router-link to="register">Créer compte</router-link>
+            <router-link class="m-3" to="register">Créer compte</router-link>
         </div>
     </div>
 </template>

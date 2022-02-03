@@ -5,7 +5,10 @@ import store from "./store";
 import axios from "axios";
 import loading from 'vuejs-loading-screen'
 import Gravatar from 'vue-gravatar';
+import VueLetterAvatar from 'vue-letter-avatar';
+ 
 
+Vue.use(VueLetterAvatar);
 Vue.component('v-gravatar', Gravatar);
 
 Vue.use(loading)

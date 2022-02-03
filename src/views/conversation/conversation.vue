@@ -1,12 +1,13 @@
 <template>
     <div>
-        <h1 class="title">
-            {{ conversation.label }}
-        </h1>
+        <figure class="has-text-centered">
+            <vue-letter-avatar class="" v-if="conversation.label" :name='conversation.label' />
+        </figure>
+        <h1 class="title has-text-centered">{{ conversation.label }}</h1>
         <nav class="level">
             <div class="level-left">
                 <div class="level-item">
-                    <h4 class="title is-4 has-text-info">{{ conversation.topic }}</h4> 
+                    <h5 class="title is-5 has-text-info">{{ conversation.topic }}</h5> 
                 </div>
             </div>
             <div class="level-right">
@@ -20,11 +21,11 @@
                 </div>
             </div>
         </nav>
-        <div class="buttons" v-if="edit">
-            <button @click="remove()" class="button is-danger">Supprimer Conversation</button>
-            <router-link :to="'/update-conversation/' + conversation.id" class="button is-warning">Modifier Conversation</router-link>
+        <div class="has-text-centered" v-if="edit">
+            <button @click="remove()" class="m-1 button is-danger">Supprimer Conversation</button>
+            <router-link :to="'/update-conversation/' + conversation.id" class="m-1 button is-warning">Modifier Conversation</router-link>
         </div>
-        <div v-for="msg in messages" :key="msg.id">
+        <div class="mt-5" v-for="msg in messages" :key="msg.id">
             <Message :message="msg" :edit="edit" :conversation="conversation.id"/>
         </div>
         <form @submit.prevent="send()" class="box mt-5">
@@ -33,7 +34,7 @@
                 <textarea class="textarea is-link" v-model="message" rows="2" placeholder="Hello world"></textarea>
             </div>
             <div class="field">
-                <button type="submit" class="button is-link">Send message</button>
+                <button type="submit" class="button is-link">Envoyer message</button>
             </div>    
         </form>
     </div>

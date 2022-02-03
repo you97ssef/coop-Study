@@ -2,17 +2,17 @@
     <div>
         <div class="media mb-4">
             <div class="media-left">
-                <figure class="image is-48x48">
+                <figure class="image is-64x64">
                     <v-gravatar class="is-rounded" :email="member.email" />
                 </figure>
             </div>
             <div class="media-content">
-                <p class="title is-4 mt-2">{{ member.fullname }}</p>
+                <p class="title mt-2">{{ member.fullname }}</p>
             </div>
         </div>
         
         
-        <div class="card mb-5">
+        <div class="card mb-5 has-background-primary-light">
             <div class="card-content">
                 <h3 class="subtitle is-6">
                     <b>Email: </b> {{ member.email }}
